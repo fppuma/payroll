@@ -13,7 +13,10 @@
   
 - [EmployeeRepository](src/main/java/com/example/payroll/EmployeeRepository.java)
     - Interface that extends JpaRepository.
-  
+
+- [EmployeeModelAssembler](src/main/java/com/example/payroll/EmployeeModelAssembler.java)
+    - Implements RepresentationModelAssembler
+      
 - [EmployeeController](src/main/java/com/example/payroll/EmployeeController.java)
     - Use Repository methods to display info.
     - one(id) returns EntityModel&lt;Employee&gt;
