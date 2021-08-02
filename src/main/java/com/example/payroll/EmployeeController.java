@@ -37,7 +37,7 @@ public class EmployeeController {
 	/**
 	 * Single item
 	 * @param id primary key
-	 * @return entity
+	 * @return EntityModel of Employee
 	 */
 	@GetMapping("/employees/{id}")
 	EntityModel<Employee> one(@PathVariable Long id) {
