@@ -16,7 +16,7 @@
   
 - [EmployeeController](src/main/java/com/example/payroll/EmployeeController.java)
     - Use Repository methods to display info.
-    - one(id) returns EntityModel<Employee>
+    - one(id) returns EntityModel&lt;Employee&gt;
     
 - [EmployeeNotFoundException](src/main/java/com/example/payroll/EmployeeNotFoundException.java)
     - RuntimeException class for 404 not_found.
