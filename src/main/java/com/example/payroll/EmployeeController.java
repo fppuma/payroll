@@ -48,7 +48,7 @@ public class EmployeeController {
 		  return EntityModel.of(employee, //
 		      linkTo(methodOn(EmployeeController.class).one(id)).withSelfRel(),
 		      linkTo(methodOn(EmployeeController.class).all()).withRel("employees"));
-		}
+	}
 
 	@PutMapping("/employees/{id}")
 	Employee replaceEmployee(@RequestBody Employee newEmployee, @PathVariable Long id) {
