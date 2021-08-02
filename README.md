@@ -26,7 +26,32 @@
 - [LoadDatabase](src/main/java/com/example/payroll/LoadDatabase.java)
     - Insert records in employee table using CommandLineRunner.
     
-In Windows
+## In Windows
 ```console
 curl -X POST localhost:8080/employees -H "Content-type:application/json" -d "{\"name\": \"Samwise Gamgee\", \"role\": \"gardener\"}"
 ```
+
+## HATEOAS
+```console
+curl localhost:8080/employees/1
+```
+
+Result:
+
+```json
+{
+    "id": 1,
+    "name": "Bilbo Baggins",
+    "role": "burglar",
+    "_links": {
+        "self": {
+            "href": "http://localhost:8080/employees/1"
+        },
+        "employees": {
+            "href": "http://localhost:8080/employees"
+        }
+    }
+}
+
+```
+
