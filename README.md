@@ -19,6 +19,14 @@
     
 - [EmployeeNotFoundException](src/main/java/com/example/payroll/EmployeeNotFoundException.java)
     - RuntimeException class for 404 not_found.
-    
+
+- [EmployeeNotFoundAdvice](src/main/java/com/example/payroll/EmployeeNotFoundAdvice.java)
+    - Using @ControllerAdvice annotation it returns 404 status for the EmployeeNotFoundException
+        
 - [LoadDatabase](src/main/java/com/example/payroll/LoadDatabase.java)
     - Insert records in employee table using CommandLineRunner.
+    
+In Windows
+```console
+curl -X POST localhost:8080/employees -H "Content-type:application/json" -d "{\"name\": \"Samwise Gamgee\", \"role\": \"gardener\"}"
+```
